@@ -7,6 +7,7 @@ function App() {
         <div>
           <div
               className={`w-full h-20 p-2 rounded-lg text-center text-white cursor-move ${
+                // choix pour les widgets 
                   widgetType === "widget A" ? "w-60 bg-black" : 
                   widgetType === "widget B" ? "w-60 bg-blue-500" : 
                   "w-60 bg-amber-600"
@@ -14,7 +15,8 @@ function App() {
               draggable // sans ceci le composant ne peut pas être déplacer
               onDrag={(e) => handleOnDrag(e, widgetType, fromOrigin)}
           >
-              {widgetType === "widget A" ? "1" : widgetType === "widget B" ? "2" : "3"}
+            {/* Retour / affichage du choix */}
+              {widgetType === "widget A" ? "1" : widgetType === "widget B" ? "2" : "3"}  
           </div>
         </div>
     );
